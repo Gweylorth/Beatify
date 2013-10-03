@@ -2,6 +2,8 @@
 # -*- coding: utf-8 -*-
 
 ''' Beatify, a Behat HTML Reports condenser
+Author : Gwenegan Hudin <gwenegan.hudin@insa-rennes.fr>
+
 Originally made to merge all reports under a Jenkins multi-configuration Behat job into one,
 pointing out which steps/scenarios failed over any of the profiles, and the list of failing
 profiles for each step.
@@ -18,7 +20,7 @@ import zipfile
 try: 
     from lxml.html import parse, etree, tostring
 except ImportError:
-    sys.exit("Dependance \"lxml\" manquante. Veuillez l'installer et reessayer.")
+    sys.exit("Missing \"lxml\" dependancy. Please install it and try again.")
 
 profiles = os.listdir('profile')
 failed_steps = []
